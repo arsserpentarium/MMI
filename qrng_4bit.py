@@ -2,6 +2,7 @@
 # Core principle is simple: it encodes color values of every frame in gray code, compares values of two consequent
 # frames bit by bit. And writes to output stream all bits, which changed between frames. This version of script uses
 # only 4 lesser bits, because higher bits doesn't change so often. So, without them script works much faster.
+# That algorithm is based on https://github.com/AndieNoir one. It just lose less entropy in process.
 
 def maskbit(a,b):
     r=np.array([],dtype=np.bool_)
