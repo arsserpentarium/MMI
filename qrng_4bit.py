@@ -59,5 +59,6 @@ while(True):
 # When everything done, release the capture
 file = open(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())+'.bin', "wb")
 file.write(a.read(bytes, l//8))
+file.close()
 cap.release()
 cv2.destroyAllWindows()
